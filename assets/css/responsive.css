@@ -1,0 +1,366 @@
+/* PC */
+@media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
+}
+
+/* Tablet & Mobile */
+@media (max-width: 991.98px) {
+  /* Header */
+  .nav {
+    display: none;
+  }
+  .header .body {
+    position: relative;
+  }
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+  /* Căn lại vị trí của menu icon */
+  .menu-header__icon {
+    z-index: 1;
+    position: absolute;
+    left: 26px;
+    top: 46px;
+    width: 24px;
+  }
+
+  /* 4 Overplay */
+  .menu-overplay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    inset: 0;
+    z-index: 1;
+    /* bình thường ẩn overplay*/
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+
+  /* 5 Kiểm tra nếu checkbox đc check thì hiện overplay */
+  .menu-checkbox:checked ~ .menu-overplay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* 6 code cho menu drawer */
+  .menu-drawer {
+    padding: 60px;
+    position: fixed;
+    background: #c57575;
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.5s;
+  }
+
+  /* 7 Kiểm tra nếu checkbox đc check thì hiện menu */
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+
+  /* 8  Code phần menu top */
+  .close__menu {
+    width: 24px;
+    color: #fff;
+  }
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #navbar__list--mobile {
+    margin-top: 25px;
+  }
+
+  .navbar__link {
+    padding: 8px 21px;
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.75;
+  }
+
+  .navbar__link:hover {
+    background: #00ffff37;
+  }
+
+  /* Hero */
+  .hero .body {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-left {
+    width: 74%;
+    text-align: center;
+    padding-top: 65px;
+  }
+  .hero-left .desc {
+    margin: 18px auto;
+  }
+  .hero-left .cta-group {
+    margin-top: 38px;
+    justify-content: center;
+  }
+
+  /* Features */
+  .features {
+    margin-top: 115px;
+  }
+  .features .body {
+    text-align: center;
+    width: 100%;
+  }
+  .features .heading-lv2 {
+    margin: 0 auto;
+  }
+  .features .desc {
+    margin: 18px auto;
+  }
+  .features-right {
+    margin-top: 60px;
+  }
+
+  /* Courses */
+  .courses-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    row-gap: 179px;
+  }
+  .item-center-table__mobile {
+    left: 210px;
+  }
+
+  /* Countdown */
+  .countdown {
+    margin-top: 230px;
+  }
+
+  /* Feedback */
+  .feed-back {
+    margin-top: 191px;
+  }
+  .feed-back-right .avatar1 {
+    right: 77px;
+    bottom: 155px;
+  }
+  .feed-back-right .avatar2 {
+    left: 108px;
+  }
+  .feed-back-right .avatar4 {
+    right: 32px;
+    bottom: 102px;
+  }
+  .feed-back-right .avatar5 {
+    bottom: 152px;
+    left: 31px;
+  }
+  .feed-back-right .avatar6 {
+    left: 151px;
+    bottom: 61px;
+  }
+
+  /* Admit */
+  .admit {
+    padding: 76px 0;
+  }
+  .admit .body .btn {
+    margin-left: 0;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .show-on-mobile {
+    display: none;
+  }
+  /* Footer */
+  .footer {
+    padding: 131px 40px 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  /* Header */
+  .sign {
+    display: none;
+  }
+  .menu-header__icon {
+    top: 40px;
+  }
+  .menu-drawer {
+    inset: 0 20% 0 0;
+    padding: 40px;
+  }
+  .navbar__item {
+    list-style-type: none;
+  }
+  .separate {
+    border-top: 1.5px solid #e0dbdb;
+    margin-top: 10px;
+  }
+
+  /* Hero */
+  .hero-right {
+    width: 100%;
+    height: 419px;
+  }
+  .hero-right .img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  .hero-right .courses {
+    bottom: 926px;
+    left: -29px;
+    width: 127px;
+  }
+  .hero-right .courses::after {
+    left: 15px;
+  }
+  .schedules {
+    bottom: 17px;
+    left: -33px;
+  }
+  .our-Active-Student {
+    bottom: 17px;
+    right: -16px;
+    width: 184px;
+  }
+  .hero-left .title {
+    font-size: 1rem;
+  }
+  .hero-left .heading {
+    font-size: 3rem;
+  }
+  .hero-left .desc {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  /* Features */
+  .heading-lv2 {
+    font-size: 3rem;
+    width: 100%;
+  }
+  .features .desc {
+    width: 100%;
+  }
+  .features-right {
+    flex-direction: column;
+  }
+
+  /* Courses  */
+  .courses {
+    margin-top: 570px;
+  }
+  .courses-top {
+    text-align: center;
+  }
+  .courses .desc {
+    width: 50%;
+    font-size: 1.2rem;
+  }
+  .courses-bottom {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .item-center-table__mobile {
+    left: 0;
+  }
+
+  /* Countdown */
+  .countdown .body {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Feedback */
+  .feed-back .body {
+    flex-direction: column;
+  }
+  .feed-back-left {
+    padding: 37px 0 0;
+  }
+  .feed-back-left blockquote {
+    font-size: 2.2rem;
+  }
+  .feed-back-left .desc {
+    margin-top: 14px;
+  }
+  .feedback-cta {
+    margin-top: 40px;
+  }
+  .feed-back-right {
+    width: 370px;
+    height: 394px;
+  }
+  /* Avatar */
+  .feed-back-right .avatar1 {
+    right: 51px;
+    bottom: 131px;
+  }
+
+  .feed-back-right .avatar2 {
+    top: -47px;
+    left: 33px;
+  }
+  .feed-back-right .avatar3 {
+    top: -41px;
+    right: -30px;
+  }
+  .feed-back-right .avatar5 {
+    bottom: 194px;
+    left: -25px;
+  }
+  .feed-back-right .avatar4 {
+    right: -12px;
+    bottom: 96px;
+  }
+  .feed-back-right .avatar6 {
+    left: 28px;
+    bottom: 73px;
+  }
+
+  /* Admit */
+  .admit {
+    margin-top: 0;
+  }
+  .admit .body {
+    flex-direction: column;
+    text-align: center;
+  }
+  .admit .body .btn {
+    margin-top: 30px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 100px 0;
+  }
+  .footer .body {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .footer .desc {
+    margin-top: 20px;
+    border-top: 1px solid #406181;
+    padding: 28px 0 0;
+  }
+}
+
+/* Ko tràn viền */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}

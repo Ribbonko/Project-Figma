@@ -19,6 +19,13 @@
 
     <!-- Link CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Link Responsive -->
+     <link rel="stylesheet" href="./assets/css/responsive.css">
+
+    <!-- Link Animation -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Besnik</title>
   </head>
   <body>
@@ -27,25 +34,25 @@
       <div class="main-content">
         <div class="body">
           <!-- Logo -->
-          <a href=""><img src="./assets/img/Logo.svg" alt="" class="logo" /></a>
+          <a href=""><img src="./assets/img/Logo.svg" alt="" class="logo header__logo" /></a>
 
           <!-- Nav -->
           <nav class="nav">
-            <ul>
+            <ul id="navbar__list--pc">
               <li>
-                <a href="#home">Home</a>
+                <a href="#home" class="navbar__link">Home</a>
               </li>
               <li>
-                <a href="#features">Features</a>
+                <a href="#features" class="navbar__link">Features</a>
               </li>
               <li>
-                <a href="#Pricing">Pricing</a>
+                <a href="#Pricing" class="navbar__link">Pricing</a>
               </li>
               <li>
-                <a href="#about">About</a>
+                <a href="#about" class="navbar__link">About</a>
               </li>
               <li>
-                <a href="#Contact">Contact</a>
+                <a href="#Contact" class="navbar__link">Contact</a>
               </li>
             </ul>
           </nav>
@@ -58,6 +65,63 @@
         </div>
       </div>
     </header>
+
+    <!-- Tablet/Mobile header -->
+    <div class="mobile-header">
+      <!-- Table/Mobile menu -->
+       <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden>
+       <label for="menu-checkbox">
+        <svg class="menu-header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+          <path
+            fill="currentColor"
+            d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"
+          />
+        </svg>
+      </label>
+
+      <!-- overplay -->
+      <label for="menu-checkbox" class="menu-overplay"></label>
+
+      <!-- menu content -->
+      <div class="menu-drawer">
+        <!-- menu top -->
+        <div class="menu-drawer__top">
+          <!-- logo -->
+           <a href=""><img src="./assets/img/Logo.svg" alt="" class="logo" /></a>
+           <!-- icon close menu -->
+          <label for="menu-checkbox">
+            <svg class="close__menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+              <path
+                fill="currentColor"
+                d="M320 112C434.9 112 528 205.1 528 320C528 434.9 434.9 528 320 528C205.1 528 112 434.9 112 320C112 205.1 205.1 112 320 112zM320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576zM231 231C221.6 240.4 221.6 255.6 231 264.9L286 319.9L231 374.9C221.6 384.3 221.6 399.5 231 408.8C240.4 418.1 255.6 418.2 264.9 408.8L319.9 353.8L374.9 408.8C384.3 418.2 399.5 418.2 408.8 408.8C418.1 399.4 418.2 384.2 408.8 374.9L353.8 319.9L408.8 264.9C418.2 255.5 418.2 240.3 408.8 231C399.4 221.7 384.2 221.6 374.9 231L319.9 286L264.9 231C255.5 221.6 240.3 221.6 231 231z"
+              />
+            </svg>
+          </label>
+        </div>
+
+        <!-- nav mobile -->
+        <ul id="navbar__list--mobile"></ul>
+        <!-- sử dụng js để copy navbar -->
+        <script>
+          const navPC = document.querySelector("#navbar__list--pc");
+          const navMobile = document.querySelector("#navbar__list--mobile");
+          //sao chep
+          navMobile.innerHTML = navPC.innerHTML;
+        </script>
+
+        <!-- Separate ngăn cách -->
+        <div class="separate"></div>
+        <!-- Cta group -->
+        <div class="show-on-mobile">
+          <li class="navbar__item">
+            <a href="#About" class="navbar__link">Log In</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#Doctor" class="navbar__link">Sign Up</a>
+          </li>
+        </div>
+      </div>
+    </div>
 
     <!-- Main -->
     <main class="main">
@@ -84,13 +148,13 @@
             <div class="hero-right">
               <img src="./assets/img/main-member2.svg" alt="member" class="img" />
               <!-- Courses -->
-              <div class="courses">
-                <img src="./assets/icon/Book.svg" alt="book" />
+              <div class="courses" data-aos="fade-up">
+                <img src="./assets/icon/Book.svg" alt="book"/>
                 <span class="title">Courses 1000+</span>
               </div>
 
               <!-- Schedules -->
-              <div class="schedules">
+              <div class="schedules" data-aos="fade-up">
                 <span>Schedules</span>
                 <img src="./assets/icon/group1.svg" alt="group1" />
                 <img src="./assets/icon/group2.svg" alt="group2" />
@@ -99,7 +163,7 @@
               </div>
 
               <!-- Our Active Students -->
-              <div class="our-Active-Student">
+              <div class="our-Active-Student" data-aos="fade-left">
                 <span>Our Active Students</span>
                 <div class="list-member">
                   <img src="./assets/img/member1.jpg" alt="member1" />
@@ -130,7 +194,7 @@
               <!-- Item 1 -->
               <div class="item">
                 <div class="icon">
-                  <img src="./assets/icon/features1.svg" alt="features1">
+                  <img src="./assets/icon/features1.svg" alt="features1" data-aos="flip-left">
                 </div>
                 <h3 class="title">Live Class</h3>
                 <p class="desc">We are providing live classes with the best teacher for you</p>
@@ -139,7 +203,7 @@
               <!-- Item 2 -->
               <div class="item">
                 <div class="icon">
-                  <img src="./assets/icon/features2.svg" alt="features2">
+                  <img src="./assets/icon/features2.svg" alt="features2" data-aos="flip-left">
                 </div>
                 <h3 class="title">Discuss</h3>
                 <p class="desc desc2">Conversation with teachers or another students about task or any other thing</p>
@@ -148,7 +212,7 @@
               <!-- Item 3 -->
               <div class="item">
                 <div class="icon">
-                  <img src="./assets/icon/features3.svg" alt="features3">
+                  <img src="./assets/icon/features3.svg" alt="features3" data-aos="flip-left">
                 </div>
                 <h3 class="title">Task</h3>
                 <p class="desc desc3">We give every of our students task for gathering knowledge at home</p>
@@ -208,7 +272,7 @@
                 </div>
 
                 <!-- Item 3 -->
-                <div class="item">
+                <div class="item item-center-table__mobile">
                   <img src="./assets/img/courses3.svg" alt="courses3" class="thumb">
                   <div class="card">
                     <div class="warp-item">
@@ -277,12 +341,12 @@
 
             <!-- Feed Back Right -->
              <div class="feed-back-right">
-              <img src="./assets/img/avatar1.jpg" alt="avatar1" class="avatar1">
-              <img src="./assets/img/avatar2.jpg" alt="avatar2" class="avatar2">
-              <img src="./assets/img/avatar3.jpg" alt="avatar3" class="avatar3">
-              <img src="./assets/img/avatar4.jpg" alt="avatar4" class="avatar4">
-              <img src="./assets/img/avatar5.jpg" alt="avatar5" class="avatar5">
-              <img src="./assets/img/avatar6.jpg" alt="avatar6" class="avatar6">
+              <img src="./assets/img/avatar1.jpg" alt="avatar1" class="avatar1" data-aos="zoom-in-up">
+              <img src="./assets/img/avatar2.jpg" alt="avatar2" class="avatar2" data-aos="zoom-in-right">
+              <img src="./assets/img/avatar3.jpg" alt="avatar3" class="avatar3" data-aos="zoom-in-left">
+              <img src="./assets/img/avatar4.jpg" alt="avatar4" class="avatar4" data-aos="zoom-in-left">
+              <img src="./assets/img/avatar5.jpg" alt="avatar5" class="avatar5" data-aos="zoom-in-right">
+              <img src="./assets/img/avatar6.jpg" alt="avatar6" class="avatar6" data-aos="zoom-in-right">
              </div>
           </div>
         </div>
@@ -381,5 +445,14 @@
         <p class="desc">© Copyright 2020 by Mayad Ahmed. All right reserved.</p>
       </div>
      </footer>
+
+     <!-- Link JS -->
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      mirror: true,
+      duration: 1000,
+    });
+  </script>
   </body>
 </html>

@@ -46,12 +46,6 @@ a {
   background: #fff;
 }
 
-.fixed {
-  position: sticky;
-  top: -44px;
-  z-index: 1;
-}
-
 .header .body {
   padding: 52px 0 8px;
   display: flex;
@@ -64,13 +58,13 @@ a {
   gap: 40px;
 }
 
-.nav a {
+.navbar__link {
   color: #2f3a3b;
   font-size: 1.6rem;
 }
 
 .header .sign-in:hover,
-.nav a:hover {
+.nav .navbar__link:hover {
   color: #2f3a3b;
   font-size: 1.6rem;
   text-shadow: 1px 0 0 currentColor;
@@ -121,7 +115,6 @@ a {
 
 .hero-left .heading {
   margin-top: 18px;
-  width: 458px;
   color: #0d1111;
   font-size: 6.2rem;
   font-weight: 700;
@@ -184,16 +177,15 @@ a {
 .hero-right {
   width: 641px;
   height: 631px;
-
   position: relative;
-  /* background: #e0f7f6; */
+  background: #e0f7f6;
 }
 
 .hero-right .img {
   margin-left: 65px;
   width: 576px;
   height: 631px;
-  background: #e0f7f6;
+  /* background: #e0f7f6; */
 }
 
 /* Courses */
